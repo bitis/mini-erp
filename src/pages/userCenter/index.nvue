@@ -1,0 +1,39 @@
+<template>
+  <view class="container">
+    <uni-card title="基础卡片" sub-title="副标题" extra="额外信息" :isFull="true" :thumbnail="avatar" @click="onClick">
+      <text class="uni-body">这是一个带头像和双标题的基础卡片，此示例展示了一个完整的卡片。</text>
+    </uni-card>
+  </view>
+</template>
+
+<script>
+export default {
+  components: {},
+  data() {
+    return {
+      cover: 'https://web-assets.dcloud.net.cn/unidoc/zh/shuijiao.jpg',
+      avatar: 'https://web-assets.dcloud.net.cn/unidoc/zh/unicloudlogo.png',
+      extraIcon: {
+        color: '#4cd964',
+        size: '22',
+        type: 'gear-filled'
+      }
+    }
+  },
+  methods: {
+    onClick(e) {
+      console.log(e)
+    },
+    actionsClick(text) {
+      uni.showToast({
+        title: text,
+        icon: 'none'
+      })
+    }
+  }
+}
+</script>
+
+<style>
+
+</style>
